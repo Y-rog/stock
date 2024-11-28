@@ -1,12 +1,22 @@
 package fr.studi.stock.pojo;
 
 
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
+@Entity
 public class Entrepot {
 
-    private Long entrepotId; // en base : entrepot_id
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long entrepotId;// en base : entrepot_id
+
     private String adresse;
     private String nom;
 }
