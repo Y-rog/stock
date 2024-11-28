@@ -1,4 +1,7 @@
 package fr.studi.stock.repository;
 
-public interface ProduitRepository {
+import fr.studi.stock.pojo.Produit;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProduitRepository extends JpaRepository<Produit, Long> {
 }
