@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: stock
+  datasource:
+    url: jdbc:mariadb://mysql-yrog.alwaysdata.net/yrog_stockdb
+    username: yrog_stockdb
+    password: adminstockdb
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+mqtt:
+  broker:
+    url: tcp://localhost:1883 # sécurisé, sinon 8883 (sans authentification)
+  client:
+    id: stock-app
+  username: user-app
+  password: adminstockdb
+server:
+    port: 8081
